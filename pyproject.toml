@@ -1,0 +1,24 @@
+[project]
+name = "week3-ml-baseline-system"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.28.1",
+    "kaleido>=1.2.0",
+    "pandas>=2.3.3",
+    "plotly>=6.5.0",
+    "pyarrow>=22.0.0",
+    "pytest>=9.0.2",
+    "typer>=0.21.0",
+]
+
+[project.scripts]
+ml-baseline = "ml_baseline.cli:app"
+
+[tool.uv]
+package = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
